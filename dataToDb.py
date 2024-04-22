@@ -2,20 +2,21 @@ import psycopg2
 from crawler import facebook
 import time
 import csv
+from dotenv import load_dotenv
+import os
 
 
 try:
     print('start connection')
-    connection = psycopg2.connect(user="postgres",
-                                  password="123456",
-                                  host="localhost",
-                                  port="5432",
-                                  database="buzzhome")
-    # connection = psycopg2.connect(user="postgres",
-    #                               password="123456",
-    #                               host="127.0.0.1",
-    #                               port="5432",
-    #                               database="buzzhome-dev")
+    connection_string = f"user={os.getenv('DB_USER')} " \
+                     f"password={os.getenv('DB_PASSWORD')} " \
+                     f"host={os.getenv('DB_HOST')} " \
+                     f"port={os.getenv('DB_PORT')} " \
+                     f"database={os.getenv('DB_NAME')}"
+
+# Establish the connection
+    connection = psycopg2.connect(connection_string)
+
 
     cursor = connection.cursor()
     print('start crawling')
