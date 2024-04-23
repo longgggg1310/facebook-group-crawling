@@ -10,7 +10,9 @@ import re
 from geopy.geocoders import Nominatim
 import unicodedata
 from functionUtils import *
-
+from dotenv import load_dotenv
+load_dotenv()
+import os
 chrome_options = Options()
 chrome_options.binary_location = "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
 # chrome_options.add_argument("--headless")
@@ -22,6 +24,7 @@ fbUrl = "https://m.facebook.com"
 
 class facebook:
     def __init__(self, depth=1):
+        
         self.fbUrl = "https://m.facebook.com"
         self.depth = depth
         with open('taikhoan.txt') as csv_file:
@@ -39,15 +42,15 @@ class facebook:
     def login(self):
         self.driver.get(self.fbUrl)
         time.sleep(1)
-        # userEle = self.driver.find_element_by_css_selector('#email')
-        # userEle.send_keys('chukhanh1998@gmail.com')
-        # time.sleep(1)
-        # passEle = self.driver.find_element_by_css_selector('#pass')
-        # passEle.send_keys('Khanh020798@2')
-        # time.sleep(3)
-        # loginEle = self.driver.find_element_by_css_selector('#u_0_b')
-        # loginEle.click()
-        # time.sleep(1)
+        userEle = self.driver.find_element_by_css_selector('#email')
+        userEle.send_keys(os.getenv('email '))
+        time.sleep(1)
+        passEle = self.driver.find_element_by_css_selector('#pass')
+        passEle.send_keys(os.getenv('password '))
+        time.sleep(3)
+        loginEle = self.driver.find_element_by_css_selector('#u_0_b')
+        loginEle.click()
+        time.sleep(1)
 
         self.driver.add_cookie({'name': 'fr', 'value': self.fr})
         self.driver.add_cookie({'name': 'xs', 'value': self.xs})
