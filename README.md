@@ -1,16 +1,16 @@
 ## Prerequisite
-You have to run this Crawler on Python with version 3.x. (recomment 3.9.6)
+This project utilizes Selenium to crawl a real estate Facebook group. It automates the process of logging into Facebook, extracting cookies, and then using those cookies to crawl the group's content. The crawled data is then stored in a PostgreSQL database.
 
-## Pre-running
-Before running the Facebook Group Crawler, there are some pre-step codes need doing first in terminal (MacOS) or cmd (Windows):
-* cd buzzhome-crawler
-* python -m pip install -r dependencies.txt
-* Create a new file in the same folder and name it "taikhoan.txt"
-* Open the created file and input your Facebook cookies account (F12 => tab Application => Cookies) with the following format: fr,xs,c_user,datr,sb => Save it
-* Open dataToDb.py => Edit your database information => Save it
+### Prerequisites
+* Python 3.x (recommended 3.9.6)
+* PostgreSQL
+* Facebook account
 
-## Run the Crawler
-* cd buzzhome-crawler
+## Setup
+* Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/real-estate-facebook-crawler.git
+
 * python dataToDb.py
 
 **Note:** 
