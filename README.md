@@ -18,6 +18,7 @@ This project utilizes Selenium to crawl a real estate Facebook group. It automat
    ```bash
    pip install -r requirements.txt
 * Create a new file named .env in the project directory and add the following content:
+   ```bash
   [POSTGRES]
    DB_USER= your_database_host
    DB_PASSWORD= your_database_password
