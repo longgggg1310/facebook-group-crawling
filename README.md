@@ -10,7 +10,9 @@ This project utilizes Selenium to crawl a real estate Facebook group. It automat
 * Clone the repository:
    ```bash
    git clone https://github.com/your-username/real-estate-facebook-crawler.git
-
+* Download chromedriver: 
+  ```bash
+  https://chromedriver.chromium.org/downloads
 * Navigate to the project directory:
    ```bash
    cd facebook-group-crawling
