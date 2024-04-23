@@ -32,6 +32,7 @@ This project utilizes Selenium to crawl a real estate Facebook group. It automat
 
 Replace your_database_host, your_database_name, your_database_user, your_database_password, your_facebook_email, your_database_port , and your_facebook_password with your actual database and Facebook credentials.
 ## Run the crawler:
+
     ```bash
    python crawler.py
 
