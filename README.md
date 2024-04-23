@@ -31,6 +31,9 @@ This project utilizes Selenium to crawl a real estate Facebook group. It automat
    password = your_facebook_password
 
 Replace your_database_host, your_database_name, your_database_user, your_database_password, your_facebook_email, your_database_port , and your_facebook_password with your actual database and Facebook credentials.
+## Run the crawler:
+    ```bash
+   python crawler.py
 
 **Note:** 
 * You can set up the depth of crawling by searching for the command "*fb = facebook(depth=yourDepth)*" in dataToDb.py, and set the depth to your desire.
